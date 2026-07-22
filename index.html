@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greg Johnson | Sports Journalist</title>
+    <style>
+        /* Base Styles & Typography */
+        :root {
+            --primary: #0f172a;
+            --accent: #1d4ed8;
+            --accent-hover: #1e40af;
+            --text: #334155;
+            --bg-light: #f8fafc;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header / Hero Section */
+        header {
+            background-color: var(--primary);
+            color: #ffffff;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        /* Profile Picture Styling */
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ffffff;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 6px;
+            letter-spacing: -0.02em;
+        }
+
+        header p.title {
+            font-size: 1.15rem;
+            color: #94a3b8;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        header p.bio {
+            max-width: 650px;
+            margin: 0 auto 25px auto;
+            font-size: 1.05rem;
+            color: #cbd5e1;
+        }
+
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .social-links a {
+            color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.1);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent);
+            transform: translateY(-1px);
+        }
+
+        /* Content Sections */
+        section {
+            padding: 40px 0;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            color: var(--primary);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 8px;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Card Layout for Articles */
+        .card-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 24px;
+            transition: transform 0.15s, box-shadow 0.15s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+        }
+
+        .card .meta {
+            font-size: 0.85rem;
+            color: #64748b;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            line-height: 1.35;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+            color: #475569;
+        }
+
+        .card a.read-btn {
+            display: inline-block;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .card a.read-btn:hover {
+            text-decoration: underline;
+        }
+
+        /* Thumbnail Styling */
+        .card-img {
+            width: 100%;
+            max-height: 250px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 16px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            font-size: 0.85rem;
+            color: #94a3b8;
+            border-top: 1px solid var(--border);
+        }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 2rem; }
+            header p.title { font-size: 1rem; }
+            .card { padding: 18px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Intro -->
+    <header>
+        <div class="container">
+            <!-- Header Photo -->
+            <img src="Greg Johnson Header Photo.jpg" alt="Greg Johnson" class="profile-img">
+            
+            <h1>Greg Johnson</h1>
+            <p class="title">Sports Reporter | Mercer County, New Jersey</p>
+            <p class="bio">
+                Greg Johnson has been a professional sports journalist for more than a decade with <em>The Trentonian</em> and affiliated local newspapers within MediaNews Group. He covers the New York Giants, the Somerset Patriots (Yankees’ Double-A affiliate), local high schools, and colleges. His beat reporting has taken him to major events including Super Bowl LIV in Miami and the 2026 MLB All-Star Week in Philadelphia.
+            </p>
+            <div class="social-links">
+                <a href="mailto:gjohnson@trentonian.com">Email Me</a>
+                <a href="https://x.com/gregp_j" target="_blank">X / Twitter (@gregp_j)</a>
+                <a href="https://instagram.com/gregjnj" target="_blank">Instagram (@gregjnj)</a>
+                <a href="https://www.linkedin.com/in/greg-johnson-aa3b1292/" target="_blank">LinkedIn</a>
+                <a href="https://linktr.ee/PatriotsPressPodcast" target="_blank">Patriots Press Podcast</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <!-- Selected Articles & Beat Coverage -->
+        <section>
+            <h2>Featured Articles & Beat Reporting</h2>
+            <div class="card-grid">
+
+                <div class="card">
+                    <!-- Thumbnail Image -->
+                    <img src="Article 2.jpg" alt="Ben Rice Home Run Derby" class="card-img">
+                    <div class="meta">The Trentonian • MLB All-Star Week (July 2026)</div>
+                    <h3>Yankees’ Ben Rice Fulfills Dream of Competing With Dad in MLB Home Run Derby</h3>
+                    <p>On-site reporting from Philadelphia detailing Ben Rice's memorable Home Run Derby performance alongside his father.</p>
+                    <a href="https://www.trentonian.com/2026/07/14/yankees-ben-rice-fulfills-dream-of-competing-with-dad-in-mlb-home-run-derby/?share=romitsberti2bootrdeg" class="read-btn" target="_blank">Read Full Article &rarr;</a>
+                </div>
+
+                <div class="card">
+                    <!-- Thumbnail Image -->
+                    <img src="Article 3.jpg" alt="MLB All-Star Game" class="card-img">
+                    <div class="meta">The Trentonian • MLB All-Star Week (July 2026)</div>
+                    <h3>Captivating Home Run Derby Highlights Fun MLB All-Star Week in Philadelphia</h3>
+                    <p>Column reflecting on the atmosphere, fan experience, and top storylines from 2026 MLB All-Star festivities.</p>
+                    <a href="https://www.trentonian.com/2026/07/15/johnson-captivating-home-run-derby-highlights-fun-mlb-all-star-week-in-philadelphia/?share=hehmstoo5remn0yrrnfw" class="read-btn" target="_blank">Read Full Article &rarr;</a>
+                </div>
+
+                <div class="card">
+                    <!-- Thumbnail Image -->
+                    <img src="Article 4.jpg" alt="Nick Torres Feature" class="card-img">
+                    <div class="meta">The Trentonian • Somerset Patriots / Yankees (June 2026)</div>
+                    <h3>'I Believe That I'm Here For A Reason': Nick Torres Soaks In Journey From Mexican League To Yankees</h3>
+                    <p>In-depth profile covering Nick Torres's unique path through international baseball to the New York Yankees organization.</p>
+                    <a href="https://www.trentonian.com/2026/06/15/i-believe-that-im-here-for-a-reason-nick-torres-soaks-in-journey-from-mexican-league-to-yankees/?share=rswehteosromwne6kree" class="read-btn" target="_blank">Read Full Article &rarr;</a>
+                </div>
+
+                <div class="card">
+                    <!-- Thumbnail Image -->
+                    <img src="Article 1.jpg" alt="Justin Pugh Profile" class="card-img">
+                    <div class="meta">The Trentonian • NFL Feature (November 2023)</div>
+                    <h3>From Bucks County to the NFL: How Justin Pugh Became One of the Top Offensive Linemen</h3>
+                    <p>Feature story tracing local offensive lineman Justin Pugh's football roots from Bucks County to a successful NFL career.</p>
+                    <a href="https://www.trentonian.com/2023/11/09/from-bucks-county-to-the-nfl-how-justin-pugh-became-one-of-the-top-offensive-linemen/?share=cunonvpppowotrthhote" class="read-btn" target="_blank">Read Full Article &rarr;</a>
+                </div>
+
+                <div class="card">
+                    <!-- Thumbnail Image -->
+                    <img src="Article 5.jpg" alt="Super Bowl LIV Andy Reid" class="card-img">
+                    <div class="meta">The Trentonian • Super Bowl LIV Coverage (February 2020)</div>
+                    <h3>Andy Reid’s Legacy is Complete After Chiefs Rally for Historic Super Bowl LIV Victory</h3>
+                    <p>On-the-ground Super Bowl LIV game coverage from Miami capturing Andy Reid's historic championship triumph.</p>
+                    <a href="https://www.trentonian.com/2020/02/03/andy-reids-legacy-is-complete-after-chiefs-rally-for-historic-super-bowl-liv-victory/?share=0iciiicttlro3oleoe2i" class="read-btn" target="_blank">Read Full Article &rarr;</a>
+                </div>
+
+                <div class="card">
+                    <!-- Thumbnail Image -->
+                    <img src="Article 6.jpg" alt="Super Bowl Fans Feature" class="card-img">
+                    <div class="meta">The Trentonian • Super Bowl LIV Feature (February 2020)</div>
+                    <h3>Longtime Chiefs Fans Fly From Iowa to Miami for Unforgettable Super Bowl LIV Experience</h3>
+                    <p>Human-interest feature capturing the dedication and journey of diehard Kansas City Chiefs fans at Super Bowl LIV.</p>
+                    <a href="https://www.trentonian.com/2020/02/02/longtime-chiefs-fans-fly-from-iowa-to-miami-for-unforgettable-super-bowl-liv-experience/?share=eren0rfexplaclhtelpw" class="read-btn" target="_blank">Read Full Article &rarr;</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Podcasts & Media Appearances -->
+        <section>
+            <h2>Podcasts & Broadcast Hits</h2>
+            <div class="card-grid">
+
+                <div class="card">
+                    <div class="meta">Podcast • Lead Host</div>
+                    <h3>Patriots Press Podcast</h3>
+                    <p>Dedicated podcast covering the Somerset Patriots (Double-A affiliate of the NY Yankees), prospect updates, and team analysis.</p>
+                    <a href="https://linktr.ee/PatriotsPressPodcast" class="read-btn" target="_blank">Listen to Podcast Episodes &rarr;</a>
+                </div>
+
+                <div class="card">
+                    <div class="meta">Video / Broadcast Hit • Guest Analyst</div>
+                    <h3>Featured Video Appearance & Interview</h3>
+                    <p>Discussion on local sports coverage, team analysis, and breaking beat updates.</p>
+                    <a href="https://www.youtube.com/watch?v=lHiA9TWIiIo" class="read-btn" target="_blank">Watch Video Segment &rarr;</a>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Greg Johnson. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
